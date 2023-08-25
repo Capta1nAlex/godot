@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqparc4jv5nr"]
+
+[ext_resource type="Texture2D" uid="uid://cepce0ukol5fe" path="res://AssetsForGodot/SimpleEnemy.png" id="1_g0da7"]
+[ext_resource type="Script" path="res://Enemies/SimpleEnemy/Damageable.gd" id="2_1pxks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmkgl"]
+
+[node name="SimpleEnemy" type="CharacterBody2D"]
+position = Vector2(352, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_tmkgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_g0da7")
+
+[node name="Damageable" type="Node" parent="."]
+script = ExtResource("2_1pxks")
+health = null
