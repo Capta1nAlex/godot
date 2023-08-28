@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://m4jnp4u340u4"]
+
+[ext_resource type="Texture2D" uid="uid://cs3j8x3aujmrl" path="res://AssetsForGodot/SimpleMissile.png" id="1_q4qsa"]
+[ext_resource type="Script" path="res://Weapons/Bullet.gd" id="2_5lshr"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_q4qsa")
+script = ExtResource("2_5lshr")
