@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c53a8agvwbvec"]
+[gd_scene load_steps=7 format=3 uid="uid://c53a8agvwbvec"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_56yn0"]
 [ext_resource type="Texture2D" uid="uid://cq1k7ca2u74gh" path="res://AssetsForGodot/SimpleCharacter.png" id="1_n04d5"]
 [ext_resource type="Script" path="res://Weapons/Sword.gd" id="3_vemgc"]
+[ext_resource type="PackedScene" uid="uid://dn47urm58yw1t" path="res://Weapons/TouchScreen.tscn" id="4_hcrua"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lksc6"]
 radius = 19.0
@@ -12,6 +13,7 @@ height = 68.0
 size = Vector2(64, 60)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_56yn0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,5 +30,8 @@ script = ExtResource("3_vemgc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sword"]
 position = Vector2(106, 49)
 shape = SubResource("RectangleShape2D_a5spq")
+
+[node name="TouchScreen" parent="." instance=ExtResource("4_hcrua")]
+position = Vector2(-259, 210)
 
 [connection signal="body_entered" from="Sword" to="Sword" method="_on_body_entered"]

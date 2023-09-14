@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn47urm58yw1t"]
+
+[ext_resource type="Texture2D" uid="uid://8qmej4ame73y" path="res://AssetsForGodot/Left.png" id="1_llwn6"]
+[ext_resource type="Texture2D" uid="uid://d0bmshebqp1k6" path="res://AssetsForGodot/Right.png" id="2_j63h0"]
+[ext_resource type="Texture2D" uid="uid://byxh0uaxyrs3b" path="res://AssetsForGodot/Up.png" id="3_qfmha"]
+
+[node name="TouchScreen" type="Node2D"]
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2(2, 2)
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("1_llwn6")
+texture_pressed = ExtResource("1_llwn6")
+action = "ui_left"
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2(90, 2)
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("2_j63h0")
+texture_pressed = ExtResource("2_j63h0")
+action = "ui_right"
+
+[node name="Jump" type="TouchScreenButton" parent="."]
+position = Vector2(580, 0)
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("3_qfmha")
+texture_pressed = ExtResource("3_qfmha")
+action = "ui_accept"

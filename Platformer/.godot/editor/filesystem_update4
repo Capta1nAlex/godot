@@ -1,8 +1,0 @@
-res://test_level.tscn
-res://Weapons/Sword.gd
-res://Characters/player.tscn
-res://Characters/player.gd
-res://Bullet.gd
-res://Bullet.tscn
-res://Weapons/Bullet.tscn
-res://Weapons/Bullet.gd
